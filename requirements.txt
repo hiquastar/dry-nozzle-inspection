@@ -1,0 +1,11 @@
+opencv-python>=4.8.0
+numpy>=1.24.0
+PyYAML>=6.0
+
+# Additional packages discovered in the repository
+torch
+timm>=1.0.26
+scikit-image>=0.26.0
+matplotlib>=3.7.0
+onnx>=1.15.0
+onnxruntime>=1.16.0

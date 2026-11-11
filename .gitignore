@@ -1,0 +1,209 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv/
+.venv311/
+.rfenv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.jpg
+*.jpeg
+*.png
+# Model weights (.pth/.pt/.onnx/.ckpt) are tracked via Git LFS — see .gitattributes
+logs/
+output/
+output_labels/
+temp/
+
+# Folder
+*.zip
+
+# Keep demo media and the v9 figures (override the global image ignore above).
+# The dataset images under data/ stay ignored (see the rule at the end).
+!docs/media/**
+!train/model_1/results/figures/**
+
+
+
+# LaTeX: mọi file trung gian đều nằm trong build/ (xem papers/thesis/.latexmkrc).
+# build/ bị chặn hoàn toàn bởi luật chung build/ ở trên -- KHÔNG mở lại.
+# Lý do: trước đây build/*.pdf được commit còn build/main.synctex.gz thì không,
+# nên mỗi lần pull/checkout git ghi đè PDF mà bản đồ synctex vẫn là bản cũ ->
+# Cmd+click trong PDF nhảy sai file (thường rơi vào FrontBackMatter/Contents.tex).
+# Từ 2026-10-01 latexmk ghi PDF + synctex thẳng vào papers/thesis/pdf/ (build/ chỉ còn file trung gian).
+# synctex vẫn bị chặn (luật *.synctex.gz bên dưới); sau pull/checkout làm đổi pdf/main.pdf,
+# chạy lại latexmk -g để synctex khớp lại với PDF.
+
+# PDF thành phẩm, được commit để gửi cho người khác
+!papers/thesis/pdf/
+!papers/thesis/pdf/*.pdf
+
+# Gói Pi 5: chỉ commit script và reference; mô hình ONNX và video tạo lại bằng
+# train/model_2/deploy/export_onnx_final.py + pack_pi5.py (LFS của repo đã hết quota)
+deployment/pi5_final/models/
+deployment/pi5_final/data/
+deployment/pi5_final/results/
+deployment/pi5_final/.venv/
+
+# Checkpoint mới không commit nữa (đi qua LFS, mà LFS của repo đã hết quota);
+# các checkpoint đã được track từ trước vẫn giữ nguyên
+train/model_2/checkpoint/**/*.pth
+train/model_1/checkpoint/**/*.pth
+
+# Ảnh luận văn phải được commit, ghi đè luật *.png / *.jpg ở trên
+!papers/thesis/gfx/**/*.png
+!papers/thesis/gfx/**/*.jpg
+!papers/ieee/images/**
+
+# Ảnh dùng trong README.md (ghi đè luật *.png / *.jpg ở trên)
+!docs/images/**
+
+# Ảnh dataset trong data/ KHÔNG bao giờ được commit, kể cả khi có luật ! nào ở trên.
+# Đặt cuối để luôn thắng (trong .gitignore, luật viết sau thắng luật viết trước).
+data/**/*.png
+data/**/*.jpg
+data/**/*.jpeg
+
+# File khoá tạm của Word/PowerPoint (tạo ra khi đang mở file)
+~$*
+train/model_2/data/cache_*/
+
+# LaTeX intermediates must never live in the source folders (latexmk writes them to papers/thesis/build/)
+papers/thesis/**/*.aux
+papers/thesis/*.bbl
+papers/thesis/*.blg
+papers/thesis/*.toc
+papers/thesis/*.lof
+papers/thesis/*.lot
+papers/thesis/*.lol
+papers/thesis/*.out
+papers/thesis/*.synctex.gz
+papers/thesis/main.pdf
+
+# Chạy latexmk nhầm ở thư mục gốc cũng sinh main.aux/.fls/.fdb_latexmk ở đây;
+# luật papers/thesis/ ở trên không bắt được. Chặn ở mọi thư mục.
+# KHÔNG chặn *.out toàn cục: train/model_2/checkpoint/_logs/*.out là log huấn luyện đang được commit.
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.lol
+
+# LaTeX DVI output
+*.dvi
