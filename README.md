@@ -280,8 +280,8 @@ The interactive runtime runs two pipelines side by side. The **OpenCV engine** o
 Prerequisites: Python 3.10+ (3.11 in development) and a webcam or video file. CUDA 12.x is optional and only needed for GPU training.
 
 ```bash
-git clone https://github.com/hiquastar/dry-nozzle-inspection-system.git
-cd dry-nozzle-inspection-system
+git clone https://github.com/hiquastar/dry-nozzle-inspection.git
+cd dry-nozzle-inspection
 
 python -m venv venv
 source venv/bin/activate            # Windows: venv\Scripts\activate
@@ -566,6 +566,6 @@ Distributed under the Apache License 2.0. See [`LICENSE`](LICENSE).
   author = {Hieu Tran},
   year   = {2026},
   school = {Halmstad University},
-  note   = {https://github.com/hiquastar/dry-nozzle-inspection-system}
+  note   = {https://github.com/hiquastar/dry-nozzle-inspection}
 }
 ```
